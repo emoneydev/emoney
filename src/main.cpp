@@ -51,8 +51,8 @@ static CBigNum bnProofOfStakeLimitTestNet(~uint256(0) >> 20);
 unsigned int nStakeMinAge = 24 * 60 * 60; // 1 Days for your ECASH to be able to stake
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 42 ; // 42 days
 unsigned int nStakeTargetSpacing = 1 * 60; // 1 Minute Block Target
-const int64 nChainStartTime = 1424581065; 
-const int64 nTestNetStartTime = nChainStartTime; // 21nd feb
+const int64 nChainStartTime = 1424718357; 
+const int64 nTestNetStartTime = nChainStartTime; // 23nd feb
 int nCoinbaseMaturity = 80; // mining need 80 confirm
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2588,10 +2588,10 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = nChainStartTime;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 36214029;
+        block.nNonce   = 440471126;
 
         if (IsCalculatingGenesisBlockHash && (block.GetHash() != hashGenesisBlock)) {
-			block.nNonce = 13267;
+			block.nNonce = 0;
 
             // This will figure out a valid hash and Nonce if you're
             // creating a different genesis block:
@@ -2620,7 +2620,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
         printf("block.nBits = %u \n", block.nBits);
 
-        assert(block.hashMerkleRoot == uint256("0xd62315db7d8bb966898f852981e124e67d1e3a5ac18d9406a2728e11d547faa9"));
+        assert(block.hashMerkleRoot == uint256("0x6585413cadc5b54107961ae5bc0ad4a41fa03228cb271875dd6aa9955fcf940d"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());

@@ -366,7 +366,7 @@ static MapCheckpoints mapCheckpointsTestnet =
 }
 
 //  sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "049e292647073aa0b0bf2c53956aea630f5672a192d094cae5b1a3b421ffe83728b6d48dfb924847f55f56c507db4db9a76267cb8d72e7b13f7b453f48bcffc12c";
+const std::string CSyncCheckpoint::strMasterPubKey = "04080e32d387f4fabe819a46cd072e705c33071bb244161101beee7a6e119204f796a5c01627df124c8a3c4c85404299c035d9e57a9f00caadd439e2e567872753";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 
