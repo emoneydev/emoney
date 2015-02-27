@@ -37,7 +37,7 @@ static const int64 MAX_MINT_PROOF_OF_STAKE = 29.2 * COIN;	//2920% annual stake
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 static const unsigned int MAX_TX_COMMENT_LEN = 140; //140 character limitation
 
-static const int POW_CUTOFF_BLOCK = 12000;
+static const int POW_CUTOFF_BLOCK = 6000;
 static const int PROTO_CHANGE_BLOCK = 110;
 
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
