@@ -946,13 +946,13 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
     {
         nSubsidy = 400 * COIN;
     }
-        else if(nHeight <= 5760)
+        else if(nHeight >= 5760)
     {
-        nSubsidy = 200 * COIN;
+        nSubsidy = 300 * COIN;
     }
-        else if(nHeight <= 7200)
+        else if(nHeight >= 7200)
     {
-        nSubsidy = 0 * COIN;
+        nSubsidy = 250 * COIN;
     }
 
     return nSubsidy + nFees;
